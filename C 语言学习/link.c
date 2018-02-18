@@ -27,3 +27,4 @@ void second()
 	color = 'G';
 	printf("color in the second() is %c\n",color);
 }
+#add some words
