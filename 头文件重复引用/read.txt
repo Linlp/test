@@ -1,0 +1,14 @@
+#include "a.h"
+#include "b.h"
+
+但是a.h,b.h 都 包含#include "x.h" 两次
+两种方法：
+1、linux
+条件编译：
+#ifndef _header_
+#define _header_
+//code
+#endif
+2、在windows平台下，有一个很方便的宏： #pragma once 只要在头文件的最开始加入这条指令就能够保证头文件被编译一次
+
+
