@@ -1,25 +1,24 @@
 #include<iostream>
 #include<math.h>
-#include<stdio.h>
 using namespace std;
-#define PI 3.14159265
-
+const static double PI=3.1415926/2.0;
+const static double area=50;
+int Year(double x, double y);
 int main(){
-	int N=0,year;
-	double X,Y,S;
-	cin >> N;
-	for(int i=1;i<=N;i++){
-	cin >> X >> Y;
-	S = PI*(X*X + Y*Y);
-	year = (int)ceil(S/100.0);
-//	printf("Property %d: This property will begin eroding in year %d.\n",i,year);
-  cout << "Property " << i << ": This property will begin eroding in year " <<year<< cout << "."  << endl; 	
-}
-	cout << "END OF OUTPUT." <<endl;
+	int N,i;
+	cin>>N;
+	for(i=1;i<=N;i++){
+	double x,y;
+	cin>>x>>y;
+	cout << "Property " << i << ": This property will begin eroding in year " << Year(x,y)<< "." << endl;
+}	
+	cout << "END OF OUTPUT." << endl;
 	return 0;
 }
-//Main.cpp
-//F:\temp\19547716.13647\Main.cpp(11) : error C2057: expected constant expression
-//F:\temp\19547716.13647\Main.cpp(11) : error C2466: cannot allocate an array of constant size 0
-//F:\temp\19547716.13647\Main.cpp(11) : error C2133: 'year' : unknown size
-//在线编译无法通过 在Linux 上可以编译通过
+
+int Year(double x, double y){
+	double S,R;
+	R = x*x+y*y;
+	S = PI*R; 
+	return (int)ceil(S/area);
+}

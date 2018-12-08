@@ -16,7 +16,7 @@ int main(void) {
 		double x, y;
 		cin >> x >> y;
 		int cnt = diffuse(x, y);
-		cout << "Property " << i << ": This property will begin eroding in year " << cout << "." << endl; 
+		cout << "Property " << i << ": This property will begin eroding in year " << cnt << "." << endl; 
 	}
 	cout << "END OF OUTPUT." << endl;
  
